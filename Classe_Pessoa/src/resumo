@@ -1,0 +1,36 @@
+# Modelo para Classe 
+
+public class NomeClasse {
+
+## definir atributos de objeto
+    public tipo_atributo1 nome_atributo1;
+    public tipo_atributo2 nome_atributo2;
+## definir atributos de classe 
+    public *static* tipo_atributo3 nome_atributo3; 
+
+    ...
+
+## definir os metodos da classe 
+    retorno metodo1(parametros){ }
+    retorno metodo2(parametros){ }
+    ...
+
+}
+
+
+# Modelo Programa Principal
+
+public class ProgramaPrincipal {
+    public static void main(String[] args){
+
+## criar objeto (new)
+        NomeClasse nome_objeto = new NomeClasse;
+
+## definindo parametros do objeto
+        nome_objeto.atributo1 = x;
+        nome_objeto.atributo2 = y;
+
+## chamando metodo
+        nome_objeto.metodo(parametros);
+    }
+}
