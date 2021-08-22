@@ -6,7 +6,7 @@ public class Conta {
 	private float saldo;
 	
 	public Conta(String n, int num, float s) {
-		setNome(nome);
+		setNome(n);
 		setNro(num);
 		setSaldo(s);
 	}
