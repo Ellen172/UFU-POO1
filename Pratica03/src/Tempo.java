@@ -17,6 +17,15 @@ public class Tempo {
 		setHora(h);
 	}
 	
+	public Tempo(Tempo t) {
+		int h = t.getHora();
+		int m = t.getMin();
+		int s = t.getSeg();
+		setHora(h);
+		setMin(m);
+		setSeg(s);
+	}
+	
 	public void incMin() {
 		int m = getMin();
 		setMin(m+1);
@@ -30,28 +39,28 @@ public class Tempo {
 	
 	public void getTime() {
 		if(getHora() > 9 && getMin() > 9 && getSeg() > 9) {			
-			System.out.println(getHora() + ":" + getMin() + ":" + getSeg());
+			System.out.println(getHora() + "" + getMin() + "" + getSeg());
 		}
 		else if(getHora() <= 9 && getMin() > 9 && getSeg() > 9) {			
-			System.out.println("0" + getHora() + ":" + getMin() + ":" + getSeg());
+			System.out.println("0" + getHora() + "" + getMin() + "" + getSeg());
 		}
 		else if(getHora() > 9 && getMin() <= 9 && getSeg() > 9) {			
-			System.out.println(getHora() + ":0" + getMin() + ":" + getSeg());
+			System.out.println(getHora() + "0" + getMin() + "" + getSeg());
 		}
 		else if(getHora() > 9 && getMin() > 9 && getSeg() <= 9) {			
-			System.out.println(getHora() + ":" + getMin() + ":0" + getSeg());
+			System.out.println(getHora() + "" + getMin() + "0" + getSeg());
 		}
 		else if(getHora() <= 9 && getMin() <= 9 && getSeg() > 9) {			
-			System.out.println("0" + getHora() + ":0" + getMin() + ":" + getSeg());
+			System.out.println("0" + getHora() + "0" + getMin() + "" + getSeg());
 		}
 		else if(getHora() <= 9 && getMin() > 9 && getSeg() <= 9) {			
-			System.out.println("0" + getHora() + ":" + getMin() + ":0" + getSeg());
+			System.out.println("0" + getHora() + "" + getMin() + "0" + getSeg());
 		}
 		else if(getHora() > 9 && getMin() <= 9 && getSeg() <= 9) {			
-			System.out.println(getHora() + ":0" + getMin() + ":0" + getSeg());
+			System.out.println(getHora() + "0" + getMin() + "0" + getSeg());
 		}
 		else {
-			System.out.println("0" + getHora() + ":0" + getMin() + ":0" + getSeg());
+			System.out.println("0" + getHora() + "0" + getMin() + "0" + getSeg());
 		}
 	}
 
