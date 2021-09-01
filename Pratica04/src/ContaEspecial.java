@@ -13,9 +13,7 @@ public class ContaEspecial extends Conta{
 	}
 
 	public void setLimite(double limite) {
-		if(limite < 0)
-			this.limite = 0;
-		else this.limite = limite;
+		 this.limite = limite;
 	}
 	
 	public void saque(double valor) {

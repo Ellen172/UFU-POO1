@@ -8,6 +8,8 @@ public class TestaConta {
 		Scanner entrada = new Scanner(System.in);
 		
 		ContaPoupa[] c1 = new ContaPoupa[5];
+		System.out.println("\n");
+		System.out.println("Contas Poupança");
 		for(int i=0; i<c1.length; i++) {			
 			System.out.println("Digite o cpf do cliente: ");
 			String a = entrada.next();
@@ -20,15 +22,21 @@ public class TestaConta {
 			
 			c1[i] = new ContaPoupa(a, n, s, r);
 		}
+		System.out.println("\n");
 		System.out.println("Contas Poupança");
 		for(int i=0; i<c1.length; i++) {
 			System.out.println("Cpf: " + c1[i].getCpf());
 			System.out.println("Nro da conta: " + c1[i].getNro());
 			System.out.println("Saldo: " + c1[i].getSaldo());
 			System.out.println("Rendimento: " + c1[i].getRendimento());
+			c1[i].calculaNovoSaldo();
+			System.out.println("Novo Saldo: " + c1[i].getSaldo());
+			System.out.println("\n");
 		}
 		
 		ContaEspecial[] c2 = new ContaEspecial[5];
+		System.out.println("\n");
+		System.out.println("Contas Especiais");
 		for(int i=0; i<c2.length; i++) {			
 			System.out.println("Digite o cpf do cliente: ");
 			String a = entrada.next();
@@ -38,15 +46,21 @@ public class TestaConta {
 			double s = entrada.nextDouble();
 			System.out.println("Digite o limite da conta: ");
 			double l = entrada.nextDouble();
+			System.out.println("Digite o saque: ");
+			double sq = entrada.nextDouble();
 			
 			c2[i] = new ContaEspecial(a, n, s, l);
+			c2[i].saque(sq);
 		}
+		System.out.println("\n");
 		System.out.println("Contas Especiais");
 		for(int i=0; i<c1.length; i++) {
 			System.out.println("Cpf: " + c2[i].getCpf());
 			System.out.println("Nro da conta: " + c2[i].getNro());
 			System.out.println("Saldo: " + c2[i].getSaldo());
 			System.out.println("Limite: " + c2[i].getLimite());
+			System.out.println("\n");
+			
 		}
 		
 		entrada.close();
