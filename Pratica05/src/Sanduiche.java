@@ -4,11 +4,11 @@ public class Sanduiche extends Prato {
 	private String carne;
 	private String salada;
 	
-	Sanduiche(double ct, double v, int t, String p, String cr, String s){
-		super(ct, v, t);
-		setPao(p);
-		setCarne(cr);
-		setSalada(s);
+	Sanduiche(String pa, String ca, String sa, double ct, double v, int tm, String c, String d, double tx, double p, double t){
+		super(ct, v, tm, c, d, tx, p, t);
+		setPao(pa);
+		setCarne(ca);
+		setSalada(sa);
 	}
 	
 	public String getPao() {

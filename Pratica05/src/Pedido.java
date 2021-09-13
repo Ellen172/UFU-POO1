@@ -1,33 +1,17 @@
-import java.util.Scanner;
 
-public class Pedido extends Prato {
+public class Pedido{
 	private String cpf;
 	private String data;
 	private double val_taxa;
 	private double val_pratos;
 	private double val_total;
 	
-	Pedido(String c, String d){
-		super(0, 0, 0);
+	Pedido(String c, String d, double tx, double p, double t){
 		setCpf(c);
 		setData(d);
-		setVal_taxa(0);
-		setVal_pratos(0);
-		setVal_total(0);
-	}
-	
-	public void addPrato(int tp) {
-		Scanner entrada = new Scanner(System.in);
-		setTipo(tp);
-		int aux = getTipo();
-		if(aux == 1) {
-			System.out.println("Digite qual o molho: ");
-			String m = entrada.next();
-			System.out.println("Digite qual a borda: ");
-			String b = entrada.next();
-			System.out.println("Digite o recheio: ");
-			String r = entrada.next();
-		}
+		setVal_taxa(tx);
+		setVal_pratos(p);
+		setVal_total(t);
 	}
 	
 	public String getCpf() {

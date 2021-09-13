@@ -1,14 +1,14 @@
 
-public class Prato {	
+public class Prato extends Pedido {	
 	private double custo;
 	private double val_venda;
 	private int tempo_prep;
-	private int tipo;
 
-	Prato(double ct, double v, int t){
+	Prato(double ct, double v, int tm, String c, String d, double tx, double p, double t){
+		super(c, d, tx, p, t);
 		setCusto(ct);
 		setVal_venda(v);
-		setTempo_prep(t);
+		setTempo_prep(tm);
 	}
 	
 	public double getCusto() {
@@ -34,12 +34,6 @@ public class Prato {
 		if(tempo_prep < 0)
 			this.tempo_prep = 0;
 		else this.tempo_prep = tempo_prep;
-	}
-	public int getTipo() {
-		return tipo;
-	}
-	public void setTipo(int tipo) {
-		this.tipo = tipo;
 	}
 	
 }

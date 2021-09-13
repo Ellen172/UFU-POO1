@@ -4,11 +4,11 @@ public class Pizza extends Prato {
 	private String recheio; 
 	private String borda;
 	
-	Pizza(double ct, double v, int t, String m, String r, String b){
-		super(ct, v, t);
-		setMolho(m);
-		setRecheio(r);
-		setBorda(b);
+	public Pizza(String ml, String re, String bd, double ct, double v, int tm, String c, String d, double tx, double p, double t){
+		super(ct, v, tm, c, d, tx, p, t);
+		setMolho(ml);
+		setRecheio(re);
+		setBorda(bd);
 	}
 	
 	public String getMolho() {
