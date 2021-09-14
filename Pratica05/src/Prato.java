@@ -4,8 +4,8 @@ public class Prato extends Pedido {
 	private double val_venda;
 	private int tempo_prep;
 
-	Prato(double ct, double v, int tm, String c, String d, double tx, double p, double t){
-		super(c, d, tx, p, t);
+	Prato(double ct, double v, int tm, String c, String d){
+		super(c, d);
 		setCusto(ct);
 		setVal_venda(v);
 		setTempo_prep(tm);

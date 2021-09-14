@@ -4,8 +4,8 @@ public class Pizza extends Prato {
 	private String recheio; 
 	private String borda;
 	
-	public Pizza(String ml, String re, String bd, double ct, double v, int tm, String c, String d, double tx, double p, double t){
-		super(ct, v, tm, c, d, tx, p, t);
+	public Pizza(String ml, String re, String bd, double ct, double v, int tm, String c, String d){
+		super(ct, v, tm, c, d);
 		setMolho(ml);
 		setRecheio(re);
 		setBorda(bd);

@@ -14,6 +14,20 @@ public class Pedido{
 		setVal_total(t);
 	}
 	
+	Pedido(String c, String d){
+		setCpf(c);
+		setData(d);
+		setVal_taxa(5.25);
+		setVal_pratos(0);
+		setVal_total(0);
+	}
+	
+	public void addPrato(Sanduiche s) {
+		double a = s.getVal_venda();
+		double b = getVal_pratos();
+		setVal_pratos(a+b);
+	}
+	
 	public String getCpf() {
 		return cpf;
 	}
