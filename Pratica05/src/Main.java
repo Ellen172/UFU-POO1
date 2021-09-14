@@ -61,6 +61,7 @@ public class Main {
 					System.out.println("Salada de Alface = R$ 1,20");
 					String sa = entrada.next();
 					Sanduiche s = new Sanduiche(pa, ca, sa);
+					s.definePreco(pa, ca, sa);
 					p[i].addPrato(s);
 				}
 			}
@@ -85,6 +86,7 @@ public class Main {
 					System.out.println("Não há pedidos");
 				}
 			}
+			
 			
 			System.out.println();
 			System.out.println("==== MENU ====");
