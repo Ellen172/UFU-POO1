@@ -28,6 +28,12 @@ public class Pedido{
 		setVal_pratos(a+b);
 	}
 	
+	public void addPrato(Pizza p) {
+		double a = p.getVal_venda();
+		double b = getVal_pratos();
+		setVal_pratos(a+b);
+	}
+	
 	public String getCpf() {
 		return cpf;
 	}

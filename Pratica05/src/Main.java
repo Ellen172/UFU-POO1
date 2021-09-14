@@ -17,6 +17,9 @@ public class Main {
 		Sanduiche s1 = new Sanduiche("Hungaro", "Frango", "Alface", "137.451.457-98", "10/09/2021");
 		p1.addPrato(s1);
 		
+		Pizza pz1 = new Pizza("Tomate", "Queijo", "Cheddar", "137.451.457-98", "10/09/2021");
+		p1.addPrato(pz1);
+		
 		System.out.println();
 		System.out.println("=== Pedido 01 ===");
 		System.out.println();
@@ -26,5 +29,7 @@ public class Main {
 		System.out.println("Valor Pratos: " + p1.getVal_pratos());
 		System.out.println("Valor Total: " + p1.getVal_total());
 		System.out.println("Sanduiche: " + s1.getPao() + ", " + s1.getCarne() + ", " + s1.getSalada());
+		System.out.println("Pizza: " + pz1.getMolho() + ", " + pz1.getRecheio() + ", " + pz1.getBorda());
+
 	}
 }
