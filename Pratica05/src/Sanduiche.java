@@ -5,7 +5,7 @@ public class Sanduiche extends Prato {
 	private String salada;
 		
 	Sanduiche(String pa, String ca, String sa){
-		super(25);
+		super(12.54, 54.25, 25);
 		setPao(pa);
 		setCarne(ca);
 		setSalada(sa);
@@ -22,8 +22,8 @@ public class Sanduiche extends Prato {
 		if(sa == "Alface") cs += 1.2;
 		double pr = cs + (0.45 * cs);
 		
-		setCusto(cs);
-		setVal_venda(pr);
+		super.setCusto(cs);
+		super.setVal_venda(pr);
 	}
 	
 	public String getPao() {
