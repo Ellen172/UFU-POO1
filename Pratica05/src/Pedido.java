@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Pedido{
 	private String cpf;
@@ -6,6 +7,9 @@ public class Pedido{
 	private double val_pratos;
 	private double val_total;
 	
+	private ArrayList<Sanduiche> sands = new ArrayList<>();
+	private ArrayList<Pizza> pzs = new ArrayList<>();
+			
 	Pedido(String c, String d, double tx, double p, double t){
 		setCpf(c);
 		setData(d);
@@ -17,19 +21,39 @@ public class Pedido{
 	Pedido(String c, String d){
 		setCpf(c);
 		setData(d);
-		setVal_taxa(5.25);
+		setVal_taxa(0);
 		setVal_pratos(0);
 		setVal_total(0);
 	}
 	
+	Pedido(){
+		
+	}
+	
+	public void imprimeSands() {
+		for(int i=0; i<sands.size(); i++) {
+			System.out.println("Pão " + sands.get(i).getPao() + ", Carne de " + sands.get(i).getCarne() + " e " + sands.get(i).getSalada());
+		}
+	}
+	public void imprimePizzas() {
+		for(int i=0; i<pzs.size(); i++) {
+			System.out.println("Molho de " + pzs.get(i).getMolho() + ", Recheio de " + pzs.get(i).getRecheio() + " e Borda de " + pzs.get(i).getBorda());
+		}
+	}
+	
 	public void addPrato(Sanduiche s) {
 		double a = s.getVal_venda();
-		double b = getVal_pratos();
-		setVal_pratos(a+b);
+		somaValPratos(a);				
+		sands.add(s);
 	}
 	
 	public void addPrato(Pizza p) {
 		double a = p.getVal_venda();
+		somaValPratos(a);		
+		pzs.add(p);
+	}
+	
+	public void somaValPratos(double a) {
 		double b = getVal_pratos();
 		setVal_pratos(a+b);
 	}
