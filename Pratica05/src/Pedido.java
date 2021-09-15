@@ -61,7 +61,13 @@ public class Pedido{
 	}
 	
 	public void calculaTaxa(double vp) {
-		setVal_taxa(vp*0.1);
+		double tx = vp*0.1;
+		setVal_taxa(tx);
+		calculaTotal(vp, tx);
+	}
+	
+	public void calculaTotal(double vp, double tx) {
+		setVal_total(vp+tx);
 	}
 	
 	public String getCpf() {

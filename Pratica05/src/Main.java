@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String [] args) {
 		Pedido p[] = new Pedido[5];
 		int i=-1;
-		DecimalFormat df = new DecimalFormat("#,###.00");
+		DecimalFormat df = new DecimalFormat("#,###0.00");
 		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("==== MENU ====");
