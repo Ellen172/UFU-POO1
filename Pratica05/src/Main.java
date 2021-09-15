@@ -7,7 +7,7 @@ public class Main {
 		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("==== MENU ====");
-		System.out.println("1 - Ver cardapio");
+		System.out.println("1 - Ver custo dos ingredientes");
 		System.out.println("2 - Adicionar pedido");
 		System.out.println("3 - Adicionar prato");
 		System.out.println("4 - Imprimir pedido");
@@ -17,28 +17,28 @@ public class Main {
 		while(x != 0) {	
 			if(x == 1) {
 				System.out.println();
-				System.out.println("=== Cardapio ===");
+				System.out.println("=== Custos ===");
 				System.out.println();
 				System.out.println("Sanduiches: ");
 				System.out.println("Pão Hungaro = R$ 7,30");
 				System.out.println("Pão Francês = R$ 4,50");
-				System.out.println("Carne de Frango = R$ 2,98");
+				System.out.println("Carne de Frango = R$ 2,90");
 				System.out.println("Carne de Porco = R$ 5,40");
-				System.out.println("Carne de Vaca = R$ 6,55");
+				System.out.println("Carne de Vaca = R$ 6,50");
 				System.out.println("Salada de Tomate = R$ 2,00");
 				System.out.println("Salada de Alface = R$ 1,20");
 				System.out.println();
 				System.out.println("Pizzas: ");
-				System.out.println("Molho de Tomate = R$ 14,25");
-				System.out.println("Molho de Maionese = R$ 9,65");
-				System.out.println("Molho de Chocolate = R$ 6,87");
-				System.out.println("Recheio de Mussarela = R$ 18,45");
-				System.out.println("Recheio de Calabresa = R$ 12,54");
-				System.out.println("Recheio de Frango = R$ 19,99");
-				System.out.println("Recheio de Morango = R$ 8,54");
-				System.out.println("Borda de Catupiry = R$ 6,24");
-				System.out.println("Borda de Cheddar = R$ 8,54");
-				System.out.println("\n\n");
+				System.out.println("Molho de Tomate = R$ 14,20");
+				System.out.println("Molho de Maionese = R$ 9,60");
+				System.out.println("Molho de Chocolate = R$ 6,80");
+				System.out.println("Recheio de Mussarela = R$ 18,40");
+				System.out.println("Recheio de Calabresa = R$ 12,50");
+				System.out.println("Recheio de Frango = R$ 19,90");
+				System.out.println("Recheio de Morango = R$ 8,50");
+				System.out.println("Borda de Catupiry = R$ 6,20");
+				System.out.println("Borda de Cheddar = R$ 8,50");
+				System.out.println("\n");
 			}
 			
 			else if(x == 2) {
@@ -81,27 +81,27 @@ public class Main {
 					// define carne
 					String ca;
 					System.out.println("Escolha a carne: ");
-					System.out.println("1 - Frango = R$ 2,98");
+					System.out.println("1 - Frango = R$ 2,90");
 					System.out.println("2 - Porco = R$ 5,40");
-					System.out.println("3 - Vaca = R$ 6,55");
+					System.out.println("3 - Vaca = R$ 6,50");
 					int xca = entrada.nextInt();
 					while(xca<0 || xca>3) {
 						System.out.println("Opção Inválida!");
 						System.out.println("Escolha a carne: ");
-						System.out.println("1 - Frango = R$ 2,98");
+						System.out.println("1 - Frango = R$ 2,90");
 						System.out.println("2 - Porco = R$ 5,40");
-						System.out.println("3 - Vaca = R$ 6,55");
+						System.out.println("3 - Vaca = R$ 6,50");
 						xca = entrada.nextInt();
 					}
 					if(xca == 1) {
 						ca = "Frango";
-						cs += 2.98;
+						cs += 2.9;
 					} else if(xca == 2) {
 						ca = "Porco";
-						cs += 5.40;
+						cs += 5.4;
 					} else {
 						ca = "Vaca";
-						cs += 6.55;
+						cs += 6.5;
 					}
 					// define salada
 					String sa;
@@ -123,30 +123,90 @@ public class Main {
 						sa = "Alface";
 						cs += 1.2;
 					}
-					double pr = cs + (cs*0.2);
-					System.out.println("cs = " + cs);
-					System.out.println("pr = " + pr);
+					double pr = cs + (cs*0.2); // define preço
+					// inicializa sanduiche
 					Sanduiche s = new Sanduiche(pa, ca, sa, cs, pr);
-					s.imprimePreco();
 					p[i].addPrato(s);
 				}
 				if(y == 2) {
+					// define molho
+					String mo;
 					System.out.println("Escolha o molho: ");
-					System.out.println("Tomate = R$ 14,25");
-					System.out.println("Maionese = R$ 9,65");
-					System.out.println("Chocolate = R$ 6,87");
-					String mo = entrada.next();
+					System.out.println("1 - Tomate = R$ 14,20");
+					System.out.println("2 - Maionese = R$ 9,60");
+					System.out.println("3 - Chocolate = R$ 6,80");
+					int xmo = entrada.nextInt();
+					while(xmo<0 || xmo>3) {
+						System.out.println("Opção Inválida!");
+						System.out.println("Escolha o molho: ");
+						System.out.println("1 - Tomate = R$ 14,20");
+						System.out.println("2 - Maionese = R$ 9,60");
+						System.out.println("3 - Chocolate = R$ 6,80");
+						xmo = entrada.nextInt();
+					}
+					if(xmo == 1) {
+						mo = "Tomate";
+						cs += 14.2;
+					} else if(xmo == 2) {
+						mo = "Maionese";
+						cs += 9.6;
+					} else {
+						mo = "Chocolate";
+						cs += 6.8;
+					}
+					// define recheio
+					String re;
 					System.out.println("Escolha o recheio: ");
-					System.out.println("Mussarela = R$ 18,45");
-					System.out.println("Calabresa = R$ 12,54");
-					System.out.println("Frango = R$ 19,99");
-					System.out.println("Morango = R$ 8,54");
-					String re = entrada.next();
+					System.out.println("1 - Mussarela = R$ 18,40");
+					System.out.println("2 - Calabresa = R$ 12,50");
+					System.out.println("3 - Frango = R$ 19,90");
+					System.out.println("4 - Morango = R$ 8,50");
+					int xre = entrada.nextInt();
+					while(xre<0 || xre>4) {
+						System.out.println("Opção Inválida!");
+						System.out.println("Escolha o recheio: ");
+						System.out.println("1 - Mussarela = R$ 18,40");
+						System.out.println("2 - Calabresa = R$ 12,50");
+						System.out.println("3 - Frango = R$ 19,90");
+						System.out.println("4 - Morango = R$ 8,50");
+						xre = entrada.nextInt();
+					}
+					if(xre == 1) {
+						re = "Mussarela";
+						cs += 18.4;
+					} else if(xre == 2) {
+						re = "Calabresa";
+						cs += 12.5;
+					} else if(xre == 3) {
+						re = "Frango";
+						cs += 19.9;
+					} else {
+						re = "Morango";
+						cs += 8.5;
+					}
+					// define borda
+					String bo;
 					System.out.println("Escolha a borda: ");
-					System.out.println("Catupiry = R$ 6,24");
-					System.out.println("Cheddar = R$ 8,54");
-					String bo = entrada.next();
-					Pizza pz = new Pizza(mo, re, bo);
+					System.out.println("1 - Catupiry = R$ 6,20");
+					System.out.println("2 - Cheddar = R$ 8,50");
+					int xbo = entrada.nextInt();
+					while(xbo<0 || xbo>2) {
+						System.out.println("Opção Inválida!");
+						System.out.println("Escolha a borda: ");
+						System.out.println("1 - Catupiry = R$ 6,20");
+						System.out.println("2 - Cheddar = R$ 8,50");
+						xbo = entrada.nextInt();
+					}
+					if(xbo == 1) {
+						bo = "Caputiry";
+						cs += 6.2;
+					} else {
+						bo = "Cheddar";
+						cs += 8.5;
+					}
+					double pr = cs + (cs*0.4); // define preço
+					// inicializa pizza
+					Pizza pz = new Pizza(mo, re, bo, cs, pr);
 					p[i].addPrato(pz);
 				}
 			}
@@ -172,10 +232,9 @@ public class Main {
 				}
 			}
 			
-			
 			System.out.println();
 			System.out.println("==== MENU ====");
-			System.out.println("1 - Ver cardapio");
+			System.out.println("1 - Ver custo dos ingredientes");
 			System.out.println("2 - Adicionar pedido");
 			System.out.println("3 - Adicionar prato");
 			System.out.println("4 - Imprimir pedido");

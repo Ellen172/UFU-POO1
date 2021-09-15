@@ -11,15 +11,6 @@ public class Sanduiche extends Prato {
 		setSalada(sa);
 	}
 	
-	public void imprimePreco() {
-		double a = super.getCusto();
-		System.out.println("custo = " + a);
-		double b = super.getVal_venda();
-		System.out.println("venda = " + b);
-		double c = super.getTempo_prep();
-		System.out.println("tempo = " + c);
-	}
-	
 	public String getPao() {
 		return pao;
 	}
