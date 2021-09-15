@@ -5,16 +5,14 @@ public class Prato extends Pedido {
 	private int tempo_prep;
 
 	Prato(double ct, double v, int tm){
-		super();
 		setCusto(ct);
 		setVal_venda(v);
 		setTempo_prep(tm);
 	}
-
 	Prato(int tm){
 		super();
 		setTempo_prep(tm);
-	}
+	} 
 	
 	public double getCusto() {
 		return custo;

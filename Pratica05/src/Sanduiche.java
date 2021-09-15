@@ -5,25 +5,19 @@ public class Sanduiche extends Prato {
 	private String salada;
 		
 	Sanduiche(String pa, String ca, String sa){
-		super(12.54, 54.25, 25);
+		super(25);
 		setPao(pa);
 		setCarne(ca);
 		setSalada(sa);
 	}
 	
-	public void definePreco(String pa, String ca, String sa) {
-		double cs = 0.0;
-		if(pa == "Hungaro") cs += 10;
-		if(pa == "Francês") cs += 6.4;
-		if(ca == "Frango") cs += 7.3;
-		if(ca == "Porco") cs += 3.45;
-		if(ca == "Vaca") cs += 5.67;
-		if(sa == "Tomate") cs += 2.4;
-		if(sa == "Alface") cs += 1.2;
-		double pr = cs + (0.45 * cs);
-		
-		super.setCusto(cs);
-		super.setVal_venda(pr);
+	public void imprimePreco() {
+		double a = super.getCusto();
+		System.out.println("custo = " + a);
+		double b = super.getVal_venda();
+		System.out.println("venda = " + b);
+		double c = super.getTempo_prep();
+		System.out.println("tempo = " + c);
 	}
 	
 	public String getPao() {

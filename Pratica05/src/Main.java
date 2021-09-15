@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -72,7 +71,6 @@ public class Main {
 					System.out.println("Alface = R$ 1,20");
 					String sa = entrada.next();
 					Sanduiche s = new Sanduiche(pa, ca, sa);
-					s.definePreco(pa, ca, sa);
 					p[i].addPrato(s);
 				}
 				if(y == 2) {
@@ -92,7 +90,6 @@ public class Main {
 					System.out.println("Cheddar = R$ 8,54");
 					String bo = entrada.next();
 					Pizza pz = new Pizza(mo, re, bo);
-					pz.definePreco(mo, re, bo);
 					p[i].addPrato(pz);
 				}
 			}
