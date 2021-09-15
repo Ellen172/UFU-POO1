@@ -132,16 +132,16 @@ public class Main {
 					// define molho
 					String mo;
 					System.out.println("Escolha o molho: ");
-					System.out.println("1 - Tomate = R$ 14,20");
-					System.out.println("2 - Maionese = R$ 9,60");
-					System.out.println("3 - Chocolate = R$ 6,80");
+					System.out.println("1 - Tomate");
+					System.out.println("2 - Maionese");
+					System.out.println("3 - Chocolate");
 					int xmo = entrada.nextInt();
 					while(xmo<0 || xmo>3) {
 						System.out.println("Opção Inválida!");
 						System.out.println("Escolha o molho: ");
-						System.out.println("1 - Tomate = R$ 14,20");
-						System.out.println("2 - Maionese = R$ 9,60");
-						System.out.println("3 - Chocolate = R$ 6,80");
+						System.out.println("1 - Tomate");
+						System.out.println("2 - Maionese");
+						System.out.println("3 - Chocolate");
 						xmo = entrada.nextInt();
 					}
 					if(xmo == 1) {
@@ -157,18 +157,18 @@ public class Main {
 					// define recheio
 					String re;
 					System.out.println("Escolha o recheio: ");
-					System.out.println("1 - Mussarela = R$ 18,40");
-					System.out.println("2 - Calabresa = R$ 12,50");
-					System.out.println("3 - Frango = R$ 19,90");
-					System.out.println("4 - Morango = R$ 8,50");
+					System.out.println("1 - Mussarela");
+					System.out.println("2 - Calabresa");
+					System.out.println("3 - Frango");
+					System.out.println("4 - Morango");
 					int xre = entrada.nextInt();
 					while(xre<0 || xre>4) {
 						System.out.println("Opção Inválida!");
 						System.out.println("Escolha o recheio: ");
-						System.out.println("1 - Mussarela = R$ 18,40");
-						System.out.println("2 - Calabresa = R$ 12,50");
-						System.out.println("3 - Frango = R$ 19,90");
-						System.out.println("4 - Morango = R$ 8,50");
+						System.out.println("1 - Mussarela");
+						System.out.println("2 - Calabresa");
+						System.out.println("3 - Frango");
+						System.out.println("4 - Morango");
 						xre = entrada.nextInt();
 					}
 					if(xre == 1) {
@@ -187,14 +187,14 @@ public class Main {
 					// define borda
 					String bo;
 					System.out.println("Escolha a borda: ");
-					System.out.println("1 - Catupiry = R$ 6,20");
-					System.out.println("2 - Cheddar = R$ 8,50");
+					System.out.println("1 - Catupiry");
+					System.out.println("2 - Cheddar");
 					int xbo = entrada.nextInt();
 					while(xbo<0 || xbo>2) {
 						System.out.println("Opção Inválida!");
 						System.out.println("Escolha a borda: ");
-						System.out.println("1 - Catupiry = R$ 6,20");
-						System.out.println("2 - Cheddar = R$ 8,50");
+						System.out.println("1 - Catupiry");
+						System.out.println("2 - Cheddar");
 						xbo = entrada.nextInt();
 					}
 					if(xbo == 1) {
