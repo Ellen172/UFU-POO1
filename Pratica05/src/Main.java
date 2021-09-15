@@ -51,26 +51,83 @@ public class Main {
 			}
 			
 			else if(x == 3) {
+				double cs = 0.0;
 				System.out.println("Escolha o prato: ");
 				System.out.println("1 - Sanduiche");
 				System.out.println("2 - Pizza");
 				int y = entrada.nextInt();
 				
 				if(y == 1) {
+					// define pão
+					String pa;
 					System.out.println("Escolha o pão: ");
-					System.out.println("Hungaro = R$ 7,30");
-					System.out.println("Francês = R$ 4,50");
-					String pa = entrada.next();
+					System.out.println("1 - Hungaro = R$ 7,30");
+					System.out.println("2 - Francês = R$ 4,50");
+					int xpa = entrada.nextInt();
+					while(xpa<0 || xpa>2) {
+						System.out.println("Opção Inválida!");
+						System.out.println("Escolha o pão: ");
+						System.out.println("1 - Hungaro = R$ 7,30");
+						System.out.println("2 - Francês = R$ 4,50");					
+						xpa = entrada.nextInt();
+					}
+					if(xpa == 1) {
+						pa = "Hungaro";
+						cs += 7.30;
+					} else {
+						pa = "Francês";
+						cs += 4.50;
+					} 
+					// define carne
+					String ca;
 					System.out.println("Escolha a carne: ");
-					System.out.println("Frango = R$ 2,98");
-					System.out.println("Porco = R$ 5,40");
-					System.out.println("Vaca = R$ 6,55");
-					String ca = entrada.next();
+					System.out.println("1 - Frango = R$ 2,98");
+					System.out.println("2 - Porco = R$ 5,40");
+					System.out.println("3 - Vaca = R$ 6,55");
+					int xca = entrada.nextInt();
+					while(xca<0 || xca>3) {
+						System.out.println("Opção Inválida!");
+						System.out.println("Escolha a carne: ");
+						System.out.println("1 - Frango = R$ 2,98");
+						System.out.println("2 - Porco = R$ 5,40");
+						System.out.println("3 - Vaca = R$ 6,55");
+						xca = entrada.nextInt();
+					}
+					if(xca == 1) {
+						ca = "Frango";
+						cs += 2.98;
+					} else if(xca == 2) {
+						ca = "Porco";
+						cs += 5.40;
+					} else {
+						ca = "Vaca";
+						cs += 6.55;
+					}
+					// define salada
+					String sa;
 					System.out.println("Escolha a salada: ");
-					System.out.println("Tomate = R$ 2,00");
-					System.out.println("Alface = R$ 1,20");
-					String sa = entrada.next();
-					Sanduiche s = new Sanduiche(pa, ca, sa);
+					System.out.println("1 - Tomate = R$ 2,00");
+					System.out.println("2 - Alface = R$ 1,20");
+					int xsa = entrada.nextInt();
+					while(xsa<0 || xsa>2) {
+						System.out.println("Opção Inválida!");
+						System.out.println("Escolha a salada: ");
+						System.out.println("1 - Tomate = R$ 2,00");
+						System.out.println("2 - Alface = R$ 1,20");
+						xsa = entrada.nextInt();
+					}
+					if(xsa == 1) {
+						sa = "Tomate";
+						cs += 2;
+					} else {
+						sa = "Alface";
+						cs += 1.2;
+					}
+					double pr = cs + (cs*0.2);
+					System.out.println("cs = " + cs);
+					System.out.println("pr = " + pr);
+					Sanduiche s = new Sanduiche(pa, ca, sa, cs, pr);
+					s.imprimePreco();
 					p[i].addPrato(s);
 				}
 				if(y == 2) {
