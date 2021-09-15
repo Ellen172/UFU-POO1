@@ -55,7 +55,13 @@ public class Pedido{
 	
 	public void somaValPratos(double a) {
 		double b = getVal_pratos();
-		setVal_pratos(a+b);
+		double vp = a+b;
+		setVal_pratos(vp);
+		calculaTaxa(vp);
+	}
+	
+	public void calculaTaxa(double vp) {
+		setVal_taxa(vp*0.1);
 	}
 	
 	public String getCpf() {
