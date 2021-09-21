@@ -10,6 +10,10 @@ public class Circulo extends Bidimensional{
 		double r = getRaio();
 		return 3.14*r*r;
 	}
+	public void exibirDados() {
+		System.out.println("Forma: Circulo");
+		System.out.println("Raio: " + getRaio());
+	}
 
 	public double getRaio() {
 		return raio;

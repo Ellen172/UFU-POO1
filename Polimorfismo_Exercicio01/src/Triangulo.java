@@ -12,6 +12,12 @@ public class Triangulo extends Bidimensional {
 		double h = getAltura();
 		return b*h;
 	}
+	public void exibirDados() {
+		System.out.println("Forma: Triangulo");
+		System.out.println("Base: " + getBase());
+		System.out.println("Altura: " + getAltura());
+	}
+
 
 	public double getBase() {
 		return base;

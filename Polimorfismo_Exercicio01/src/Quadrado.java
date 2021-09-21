@@ -10,6 +10,10 @@ public class Quadrado extends Bidimensional {
 		double l = getLado();
 		return l*l;
 	}
+	public void exibirDados() {
+		System.out.println("Forma: Quadrado");
+		System.out.println("Lado: " + getLado());
+	}
 
 	public double getLado() {
 		return lado;
