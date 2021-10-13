@@ -25,7 +25,7 @@ public class ButtonTest extends JFrame {
 	
 	private class TrataBotoes implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			if(e.getSource() == botao1) {
+			if(e.getSource() == botao1) { // quem gerou o evento
 				label.setText("Pressionado botão 1");
 			}
 			else {
