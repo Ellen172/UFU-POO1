@@ -1,7 +1,12 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class DadosEmpregado {
+public class DadosEmpregado implements Serializable{
 	ArrayList<Empregado> lista = new ArrayList<Empregado>();
+	
+	public ArrayList array() {
+		return lista;
+	}
 	
 	public void insere(Empregado emp) {
 		if(emp != null)

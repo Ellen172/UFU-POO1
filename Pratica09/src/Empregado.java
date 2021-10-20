@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.lang.Comparable;
 
-public class Empregado implements Comparable {
+public class Empregado implements Comparable, Serializable {
 	private String cpf;
 	private int anoNascimento;
 	private double salario;
