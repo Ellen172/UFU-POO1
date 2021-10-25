@@ -22,8 +22,8 @@ public class Main {
 				System.out.println("=== Custos ===");
 				System.out.println();
 				System.out.println("Sanduiches: ");
-				System.out.println("Pão Hungaro = R$ 7,00");
-				System.out.println("Pão Francês = R$ 4,50");
+				System.out.println("Pï¿½o Hungaro = R$ 7,00");
+				System.out.println("Pï¿½o Francï¿½s = R$ 4,50");
 				System.out.println("Carne de Frango = R$ 2,10");
 				System.out.println("Carne de Porco = R$ 5,40");
 				System.out.println("Carne de Vaca = R$ 6,50");
@@ -54,7 +54,7 @@ public class Main {
 			
 			else if(x == 3) {
 				if(i<0) {
-					System.out.println("Não foi adicionado nenhum pedido!");
+					System.out.println("Nï¿½o foi adicionado nenhum pedido!");
 				}
 				else {
 					double cs = 0.0;
@@ -64,24 +64,24 @@ public class Main {
 					int y = entrada.nextInt();
 					
 					if(y == 1) {
-						// define pão
+						// define pï¿½o
 						String pa;
-						System.out.println("Escolha o pão: ");
+						System.out.println("Escolha o pï¿½o: ");
 						System.out.println("1 - Hungaro");
-						System.out.println("2 - Francês");
+						System.out.println("2 - Francï¿½s");
 						int xpa = entrada.nextInt();
 						while(xpa<0 || xpa>2) {
-							System.out.println("Opção Inválida!");
-							System.out.println("Escolha o pão: ");
+							System.out.println("Opï¿½ï¿½o Invï¿½lida!");
+							System.out.println("Escolha o pï¿½o: ");
 							System.out.println("1 - Hungaro");
-							System.out.println("2 - Francês");					
+							System.out.println("2 - Francï¿½s");					
 							xpa = entrada.nextInt();
 						}
 						if(xpa == 1) {
 							pa = "Hungaro";
 							cs += 7;
 						} else {
-							pa = "Francês";
+							pa = "Francï¿½s";
 							cs += 4.5;
 						} 
 						// define carne
@@ -92,7 +92,7 @@ public class Main {
 						System.out.println("3 - Vaca");
 						int xca = entrada.nextInt();
 						while(xca<0 || xca>3) {
-							System.out.println("Opção Inválida!");
+							System.out.println("Opï¿½ï¿½o Invï¿½lida!");
 							System.out.println("Escolha a carne: ");
 							System.out.println("1 - Frango");
 							System.out.println("2 - Porco");
@@ -116,7 +116,7 @@ public class Main {
 						System.out.println("2 - Alface");
 						int xsa = entrada.nextInt();
 						while(xsa<0 || xsa>2) {
-							System.out.println("Opção Inválida!");
+							System.out.println("Opï¿½ï¿½o Invï¿½lida!");
 							System.out.println("Escolha a salada: ");
 							System.out.println("1 - Tomate");
 							System.out.println("2 - Alface");
@@ -129,7 +129,7 @@ public class Main {
 							sa = "Alface";
 							cs += 1.2;
 						} 
-						double pr = cs + (cs*0.2); // define preço
+						double pr = cs + (cs*0.2); // define preï¿½o
 						// inicializa sanduiche
 						Sanduiche s = new Sanduiche(pa, ca, sa, cs, pr);
 						p[i].addPrato(s);
@@ -143,7 +143,7 @@ public class Main {
 						System.out.println("3 - Chocolate");
 						int xmo = entrada.nextInt();
 						while(xmo<0 || xmo>3) {
-							System.out.println("Opção Inválida!");
+							System.out.println("Opï¿½ï¿½o Invï¿½lida!");
 							System.out.println("Escolha o molho: ");
 							System.out.println("1 - Tomate");
 							System.out.println("2 - Maionese");
@@ -169,7 +169,7 @@ public class Main {
 						System.out.println("4 - Morango");
 						int xre = entrada.nextInt();
 						while(xre<0 || xre>4) {
-							System.out.println("Opção Inválida!");
+							System.out.println("Opï¿½ï¿½o Invï¿½lida!");
 							System.out.println("Escolha o recheio: ");
 							System.out.println("1 - Mussarela");
 							System.out.println("2 - Calabresa");
@@ -197,7 +197,7 @@ public class Main {
 						System.out.println("2 - Cheddar");
 						int xbo = entrada.nextInt();
 						while(xbo<0 || xbo>2) {
-							System.out.println("Opção Inválida!");
+							System.out.println("Opï¿½ï¿½o Invï¿½lida!");
 							System.out.println("Escolha a borda: ");
 							System.out.println("1 - Catupiry");
 							System.out.println("2 - Cheddar");
@@ -210,7 +210,7 @@ public class Main {
 							bo = "Cheddar";
 							cs += 8.5;
 						}
-						double pr = cs + (cs*0.4); // define preço
+						double pr = cs + (cs*0.4); // define preï¿½o
 						// inicializa pizza
 						Pizza pz = new Pizza(mo, re, bo, cs, pr);
 						p[i].addPrato(pz);
@@ -235,7 +235,7 @@ public class Main {
 					p[i].imprimePizzas();
 				}
 				else {
-					System.out.println("Não há pedidos");
+					System.out.println("Nï¿½o hï¿½ pedidos");
 				}
 			}
 			
@@ -250,4 +250,6 @@ public class Main {
 		}
 
 	}
+	
+	
 }
